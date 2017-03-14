@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kettle Agenda</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="navbar navbar-kettle">
+        <a class="navbar-brand" href="#">Kettle Agenda</a>
+    </div>
+    <section class="hero text-center">
+        <h1>Kettle Agenda</h1>
+        <h2>Life is too damn short. Get out there and make the most of it.</h2>
+    </section>
+    <section class="main col-md-12">
+        <div class="container centered col-md-6 col-md-offset-3">
+            <h2>Matt's Kettle Agenda</h2>
+            <ul class="itemList">
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Snowboard out of a helicopter.</p>
+                            <button class="btn imgUpload" data-toggle="modal" data-target="#myModal">Did it</button>
+                        </div>
+                    </li>
+                </div>
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Cuddle with an elephant.</p>
+                            <button class="btn imgUpload">Did it</button>
+                        </div>
+                    </li>
+                </div>
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Eat a pufferfish.</p>
+                            <button class="btn imgUpload">Did it</button>
+                        </div>
+                    </li>
+                </div>
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Climb Everest.</p>
+                            <button class="btn imgUpload">Did it</button>
+                        </div>
+                    </li>
+                </div>
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Perfect Muay Thai</p>
+                            <button class="btn imgUpload">Did it</button>
+                        </div>
+                    </li>
+                </div>
+                <div class="row listBox">
+                    <li class="item">
+                        <div class="itemText">
+                            <p class="text">Become a Pokemon master.</p>
+                            <button class="btn imgUpload">Did it</button>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+            <div class="listBox listBoxInput">
+                <form class="newItemInput">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="newItem" name="item" placeholder="Add a bucket list item...">
+                        <div class="input-group-btn">
+                            <button class="btn addItem" value="Add">Add</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="centered mainFooter col-md-12">
+        <p>Work in progress. Built by Matt Taylor.</p>
+    </div>
+   
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Form JS -->
+    <script>
+        $(".addItem").click(function() {
+            var item = $('#newItem').val();
+            $(".itemList").append("<div class='row listBox'><div class='itemText'><p class='text'>" + item + "</p><button class='btn imgUpload'>Did it</button></div></li>");
+            document.getElementById('newItem').value = "";
+        });
+
+        $(".newItemInput").on('submit', function(e) {
+            //add stuff to database if necessary
+            e.preventDefault();
+            return false;
+        });
+    </script>
+</body>
+
+</html>
