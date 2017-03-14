@@ -49,12 +49,24 @@ p {
 	margin: 0;
 	padding: 0;
 }
-.listBox {
+.listBox, .listBoxInput {
 	position: relative;
 	padding: 1.5em;
-	margin: 1em 0;
+	margin: 0;
 	background-color: #fff;
 	box-shadow: 0 1px 4px #dddddd;
+	border-radius: 0;
+}
+.listBoxInput {
+	border-radius: 3px;
+}
+.listBox:first-child {
+	border-radius: 3px 3px 0 0;
+}
+.listBox:last-child {
+	border-radius: 0 0 3px 3px;
+}
+.listBox:only-child {
 	border-radius: 3px;
 }
 .itemText {}

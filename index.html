@@ -30,61 +30,14 @@
     </section>
     <section class="main col-md-12">
         <div class="container centered col-md-6 col-md-offset-3">
-            <h2>Matt's Kettle Agenda</h2>
+            <h2>[username]'s Kettle Agenda</h2>
             <ul class="itemList">
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Snowboard out of a helicopter.</p>
-                            <button class="btn imgUpload" data-toggle="modal" data-target="#myModal">Did it</button>
-                        </div>
-                    </li>
-                </div>
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Cuddle with an elephant.</p>
-                            <button class="btn imgUpload">Did it</button>
-                        </div>
-                    </li>
-                </div>
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Eat a pufferfish.</p>
-                            <button class="btn imgUpload">Did it</button>
-                        </div>
-                    </li>
-                </div>
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Climb Everest.</p>
-                            <button class="btn imgUpload">Did it</button>
-                        </div>
-                    </li>
-                </div>
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Perfect Muay Thai</p>
-                            <button class="btn imgUpload">Did it</button>
-                        </div>
-                    </li>
-                </div>
-                <div class="row listBox">
-                    <li class="item">
-                        <div class="itemText">
-                            <p class="text">Become a Pokemon master.</p>
-                            <button class="btn imgUpload">Did it</button>
-                        </div>
-                    </li>
-                </div>
+
             </ul>
-            <div class="listBox listBoxInput">
+            <div class="listBoxInput">
                 <form class="newItemInput">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="newItem" name="item" placeholder="Add a bucket list item...">
+                        <input type="text" class="form-control" id="newItem" name="item" placeholder="Add something to the Kettle...">
                         <div class="input-group-btn">
                             <button class="btn addItem" value="Add">Add</button>
                         </div>
@@ -96,7 +49,7 @@
     <div class="centered mainFooter col-md-12">
         <p>Work in progress. Built by Matt Taylor.</p>
     </div>
-   
+
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -126,7 +79,7 @@
     <script>
         $(".addItem").click(function() {
             var item = $('#newItem').val();
-            $(".itemList").append("<div class='row listBox'><div class='itemText'><p class='text'>" + item + "</p><button class='btn imgUpload'>Did it</button></div></li>");
+            $(".itemList").append("<div class='row listBox'><li class='item'><div class='itemText'><p class='text'>" + item + "</p><button class='btn imgUpload'>Did it</button></div></li></div>");
             document.getElementById('newItem').value = "";
         });
 
